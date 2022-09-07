@@ -32,3 +32,7 @@
  3.  .exe -help 查看具体功能
 ## 注意 
 若要开启常驻和mimikatz、MasterKey，需要system权限运行....
+
+## 例子
+
+
