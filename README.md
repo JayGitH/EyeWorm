@@ -23,7 +23,7 @@
  
  11.oss数据定时上传
  
- ##使用 Useage
+ ## 使用 Useage
  
  1. 使用json配置文件，对目标主机收集任务进行配置 dist/EyeConfig.json
  
